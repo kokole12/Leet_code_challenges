@@ -24,9 +24,8 @@ def two_sum(nums, target):
         try:
             diff_index = nums.index(difference)
             return [i, diff_index]
-        except IndexError as e:
-            return (e.__name__)
-
+        except ValueError as e:
+            continue
 
 nums = [1, 4, 8, 2]
 target = 3
