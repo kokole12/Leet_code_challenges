@@ -22,7 +22,7 @@ def two_sum(nums, target):
     for i in range(len(nums)):
         difference = target - nums[i]
         try:
-            diff_index = nums.index(difference)
+            diff_index = nums.index(difference, i + 1)
             return [i, diff_index]
         except ValueError as e:
             continue
